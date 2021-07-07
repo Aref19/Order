@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listofOrder">
+    <fragment
+        android:id="@+id/listofOrder"
+        android:name="com.example.foliate.ListofOrder"
+        android:label="fragment_listof_order"
+        tools:layout="@layout/fragment_listof_order" >
+        <action
+            android:id="@+id/action_listofOrder_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.foliate.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
+
+</navigation>
