@@ -25,6 +25,10 @@
         android:id="@+id/dataFromuser"
         android:name="com.example.foliate.dataFromuser"
         android:label="fragment_data_fromuser"
-        tools:layout="@layout/fragment_data_fromuser" />
+        tools:layout="@layout/fragment_data_fromuser" >
+        <action
+            android:id="@+id/action_dataFromuser_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
 
 </navigation>

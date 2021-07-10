@@ -5,8 +5,11 @@ import com.example.foliate.dataFromuser
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.foliate.R
+import com.example.foliate.general.General
+import kotlinx.android.synthetic.main.fragment_data_fromuser.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -17,11 +20,16 @@ class dataFromuser constructor() : Fragment() {
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
     private var mParam2: String? = null
+    var vie:View?=null
+
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (getArguments() != null) {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            /*
+            mParam1 = it.getString(ARG_PARAM1)
+            mParam2 = it.getString(ARG_PARAM2)
+
+             */
         }
     }
 
@@ -34,6 +42,11 @@ class dataFromuser constructor() : Fragment() {
     }
 
     public override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        vie=view
+        registeren()
+
+
+
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -61,4 +74,20 @@ class dataFromuser constructor() : Fragment() {
             return fragment
         }
     }
+    fun registeren(){
+
+        vie!!.floating_check.setOnClickListener {
+
+            var dataFromuser =vie!!.passfromreg.editText?.text.toString()
+            var dataFromuserpass = vie!!.passwider.editText?.text.toString()
+            if(General.checkpass(dataFromuser,dataFromuserpass))
+                Toast.makeText(vie!!.context,"sucsses",Toast.LENGTH_LONG).show()
+            else
+                Toast.makeText(vie!!.context,"palse check your input",Toast.LENGTH_LONG).show()
+
+        }
+
+    }
+
+
 }

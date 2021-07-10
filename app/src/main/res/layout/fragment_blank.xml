@@ -5,51 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:gravity="center"
+
     tools:context=".BlankFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+
+
+    <FrameLayout
+        android:id="@+id/fram"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navibut"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navibut"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/el"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            app:startIconDrawable="@drawable/ic_baseline_email_24">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ps"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:hint="pass"
-            app:endIconMode="password_toggle"
-            app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-          
-
-        </LinearLayout>
-
-
+        style="@style/Flo"
+        app:menu="@menu/menue" />
 
 
 </RelativeLayout>

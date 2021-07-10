@@ -8,18 +8,26 @@
 
 
     </style>
-    <style name="Flo" parent="Widget.Design.FloatingActionButton">
-<item name="shapeAppearanceOverlay">@style/button2</item>
 
+    <style name="Flo" parent="Widget.Design.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/button2</item>
 
 
     </style>
+
     <style name="Flo1" parent="Widget.Design.FloatingActionButton">
         <item name="shapeAppearanceOverlay">@style/button</item>
 
 
+    </style>
+    <style name="Navi1" parent="Widget.Design.NavigationView">
+        <item name="shapeAppearanceOverlay">@style/nav</item>
+
 
     </style>
+
+
+
     <style name="button" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerSize">50%</item>
 
@@ -29,6 +37,7 @@
         <item name="cornerFamilyTopRight">cut</item>
 
     </style>
+
     <style name="button2" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerSize">50%</item>
         <item name="cornerSizeBottomRight">0dp</item>
@@ -38,5 +47,19 @@
         <item name="cornerFamilyTopRight">rounded</item>
 
     </style>
+
+
+        <style name="nav" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+
+            <item name="android:background">?attr/actionBarDivider</item>
+            <item name="itemIconTint">@color/mtrl_bottom_nav_colored_item_tint</item>
+            <item name="itemRippleColor">@color/mtrl_bottom_nav_colored_ripple_color</item>
+            <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+            <item name="itemTextAppearanceActive">?attr/action</item>
+            <item name="itemTextColor">@color/mtrl_bottom_nav_colored_item_tint</item>
+        </style>
+
+
+
 
 </resources>

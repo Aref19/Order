@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "742870663352",
+    "project_id": "order-9616c",
+    "storage_bucket": "order-9616c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742870663352:android:999cd0290247e8319db44d",
+        "android_client_info": {
+          "package_name": "com.example.foliate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742870663352-u7huq9epptq611i9o6ilsq0573gc6flk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGIrbGyVSmQBiG_374efxwhnKbwhjPVck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742870663352-u7huq9epptq611i9o6ilsq0573gc6flk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

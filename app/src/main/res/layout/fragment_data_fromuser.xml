@@ -21,10 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_baseline_email_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -32,7 +34,7 @@
             android:id="@+id/passfromreg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            app:errorEnabled="true"
             android:hint="pass"
             app:endIconMode="password_toggle"
             app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
@@ -48,7 +50,7 @@
         android:id="@+id/passwider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        app:errorEnabled="true"
         android:hint="pass erneut"
         app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
@@ -60,7 +62,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
 
+            app:srcCompat="@drawable/ic_baseline_check_24"/>
 
 
 
