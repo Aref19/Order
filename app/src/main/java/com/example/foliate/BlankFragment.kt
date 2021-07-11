@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.foliate.adpter.RecyclerAdpter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +24,7 @@ class BlankFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    var vie: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +38,28 @@ class BlankFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false)
+   vie=inflater.inflate(R.layout.fragment_blank, container, false)
+        return vie
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        var s=view.findViewById<Button>(R.id.s)
+        var rec=view.findViewById<RecyclerView>(R.id.recycl)
+        var lsit:ArrayList<String>?= arrayListOf()
+        s.setOnClickListener {
+
+            lsit!!.add("aref")
+            lsit!!.add("aref")
+            var adpter =RecyclerAdpter(lsit)
+            rec.layoutManager=LinearLayoutManager(view.context)
+            rec.adapter=adpter
+            rec.refreshDrawableState()
+
+
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+
     }
 
     companion object {

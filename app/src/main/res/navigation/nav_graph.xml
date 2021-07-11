@@ -20,7 +20,11 @@
         android:id="@+id/blankFragment"
         android:name="com.example.foliate.BlankFragment"
         android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_listofOrder"
+            app:destination="@id/listofOrder" />
+    </fragment>
     <fragment
         android:id="@+id/dataFromuser"
         android:name="com.example.foliate.dataFromuser"
