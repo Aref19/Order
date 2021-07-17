@@ -1,6 +1,4 @@
 package com.example.foliate.moldle
 
-class User(email:String,password:String) {
-    var email=email
-    var pass=password
-}
+data class User( var email:String, var password:String)
+
